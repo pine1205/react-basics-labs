@@ -46,3 +46,9 @@ div {
   color: purple;
   font-size: 1em; 
 }
+
+.priority{
+  font-weight: bold;
+  color: blueviolet;
+  font-size: 1.3em; 
+}
