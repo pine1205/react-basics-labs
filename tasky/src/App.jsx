@@ -1,6 +1,8 @@
 import './App.css';
 import Task from './components/Task';
 import React, { useState } from 'react';
+import AddTaskForm from './components/Form';
+
 
 
 function App() {
@@ -41,9 +43,9 @@ function App() {
       markDone={() => doneHandler(index)}  // changes the done button to true or faulse
       deleteTask = {() => deleteHandler(index)}
 
-
     />
   ))} 
+   <AddTaskForm />
 
     </div>
   );
