@@ -20,6 +20,12 @@ function App() {
     console.log(`${taskIndex} ${tasks[taskIndex].done}`);
   }
 
+  const deleteHandler = (taskIndex) => {
+    const tasks = [...taskState.tasks];   // making copy of the array
+    tasks.splice(taskIndex, 1);    //choose the element of the array - taskIndex and remove it from the array splice()
+    setTaskState({tasks});   // sets task state with updated array
+  } 
+
 
   return (
     <div className="container">
@@ -33,6 +39,8 @@ function App() {
       priority={task.priority}
       done={task.done}   // checks if it is true or faulse 
       markDone={() => doneHandler(index)}  // changes the done button to true or faulse
+      deleteTask = {() => deleteHandler(index)}
+
 
     />
   ))} 
