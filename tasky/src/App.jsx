@@ -45,6 +45,9 @@ function App() {
       case "deadline":
           form.deadline = event.target.value;
           break;
+       case "priority":
+          form.priority = event.target.value;
+          break;   
       default:
           form = formState;
     }
@@ -58,7 +61,7 @@ function App() {
     title: "",
     description: "",
     deadline: "",
-    priority: ""
+    priority: "Low"
   });
 
   console.log(formState);
